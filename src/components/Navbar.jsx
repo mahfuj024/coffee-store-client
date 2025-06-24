@@ -1,7 +1,7 @@
 import { FaCartPlus } from "react-icons/fa6";
 import { Link, NavLink } from 'react-router'
 import logo from "../assets/logo.png"
-import { use, useState } from "react";
+import { use } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 function Navbar() {
@@ -51,7 +51,8 @@ function Navbar() {
             </div>
             <div className="navbar-end space-x-4">
                 <p onClick={handleShowCart} className="flex items-center"><FaCartPlus size={18} /> <span className="text-sm ml-1 pb-4 font-light">{products.length}</span></p>
-                <a className="btn">Button</a>
+                <Link to="/login" className="btn">Log in</Link>
+                <Link to="/signup" className="btn">Sign up</Link>
             </div>
 
             {/* show cart modal */}
