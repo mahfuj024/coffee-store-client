@@ -3,6 +3,7 @@ import backgroundImg from "../assets/product-bg.png"
 import { FaEye, FaPen } from "react-icons/fa";
 import { MdDelete } from 'react-icons/md';
 import Swal from "sweetalert2";
+import { Link } from 'react-router';
 
 function DisplayCoffee() {
 
@@ -65,8 +66,8 @@ function DisplayCoffee() {
                             <p>Category : {coffee.category}</p>
                         </div>
                         <div className='flex flex-col space-y-4'>
-                            <button className="btn bg-[#D2B48C]"><FaEye className='text-white' size={17} /></button>
-                            <button className="btn bg-[#3C393B]"><FaPen className='text-white' size={17} /></button>
+                            <Link to={`/coffeedetails/${coffee._id}`} className="btn bg-[#D2B48C]"><FaEye className='text-white' size={17} /></Link>
+                            <Link to={`/coffeeupdate/${coffee._id}`} className="btn bg-[#3C393B]"><FaPen className='text-white' size={17} /></Link>
                             <button onClick={() => handleDeleteCoffe(coffee._id)} className="btn bg-[#EA4744]"><MdDelete className='text-white' size={17} /></button>
                         </div>
                     </div>)
