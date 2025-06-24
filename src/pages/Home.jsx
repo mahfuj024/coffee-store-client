@@ -1,5 +1,6 @@
 import { Link } from "react-router"
 import banner from "../assets/banner.png"
+import DisplayCoffee from "./DisplayCoffee"
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
           <Link to="/bannerdetails" className="btn  transition-all duration-300 overflow-hidden group hover:scale-105 hover:tracking-wide shadow-md hover:shadow-lg">Learn More</Link>
         </div>
       </div>
+      <DisplayCoffee></DisplayCoffee>
     </div>
   )
 }

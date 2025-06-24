@@ -46,6 +46,7 @@ function Navbar() {
                 <ul className="menu menu-horizontal px-1 text-base font-semibold space-x-12">
                     <NavLink className={({ isActive }) => isActive ? "text-blue-500" : ""} to="/">Home</NavLink>
                     <NavLink className={({ isActive }) => isActive ? "text-blue-500" : ""} to="/other_products">Other_Products</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? "text-blue-500" : ""} to="/addcoffee">Addcoffee</NavLink>
                 </ul>
             </div>
             <div className="navbar-end space-x-4">

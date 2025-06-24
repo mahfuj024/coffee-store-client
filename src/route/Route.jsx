@@ -5,6 +5,8 @@ import Home from "../pages/Home";
 import BannerDetails from "../pages/BannerDetails";
 import Products from "../pages/Products";
 import ProductDetails from "../pages/ProductDetails";
+import AddCoffee from "../pages/AddCoffee";
+import DisplayCoffee from "../pages/DisplayCoffee";
 
 export const router = createBrowserRouter([
     {
@@ -15,14 +17,18 @@ export const router = createBrowserRouter([
             { index: true, Component: Home },
             { path: "bannerdetails", Component: BannerDetails },
             {
-                path : "other_products",
-                loader : () => fetch("https://fakestoreapi.com/products"),
-                Component : Products
+                path: "other_products",
+                loader: () => fetch("https://fakestoreapi.com/products"),
+                Component: Products
             },
             {
-                path : "productDetaila/:id",
-                loader : ({params}) => fetch(`https://fakestoreapi.com/products/${params.id}`),
-                Component : ProductDetails
+                path: "productDetaila/:id",
+                loader: ({ params }) => fetch(`https://fakestoreapi.com/products/${params.id}`),
+                Component: ProductDetails
+            },
+            {
+                path: "addcoffee",
+                Component: AddCoffee
             }
         ]
     },
