@@ -11,6 +11,7 @@ import CoffeeDetails from "../pages/CoffeeDetails";
 import CoffeeUpdate from "../pages/CoffeeUpdate";
 import Signup from "../pages/Signup";
 import Login from "../pages/Login";
+import Users from "../pages/Users";
 
 export const router = createBrowserRouter([
     {
@@ -45,7 +46,12 @@ export const router = createBrowserRouter([
                 Component: CoffeeUpdate
             },
             { path: "signup", Component: Signup },
-            { path: "login", Component: Login }
+            { path: "login", Component: Login },
+            {
+                path: "users",
+                loader : () => fetch("http://localhost:4000/users"),
+                Component: Users
+            }
         ]
     },
 ]);

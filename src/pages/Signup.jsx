@@ -15,8 +15,21 @@ function Signup() {
     const photo = form.photo.value
     const email = form.email.value
     const password = form.password.value
-    const newUser = { name, address, number, photo, email, password }
+    const newUser = { name, address, number, photo, email }
     console.log(newUser)
+
+    // newUser data send in database
+    fetch("http://localhost:4000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newUser)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log("data from database :", data)
+      })
 
     // create user in fairbase
     createUser(email, password)
